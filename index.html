@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | ToDo Cal Hacks 8.0</title>
+    <style type=text/css>
+    body {
+      background-color: #a1c2d2;
+      height: 125vh;
+      margin-top: 80px;
+      padding: 30px;
+      background-size: cover;
+      font-family: sans-serif;
+      overflow: hidden; /* Hide scrollbars */
+    }
+    header {
+      background-color: #fedc8f;
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 5px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 0 25px 0 black;
+    }
+    header * {
+      display: inline;
+    }
+    header li {
+      margin: 20px;
+    }
+    header li a {
+      color: #003262;
+      text-decoration: none;
+    }
+    </style>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="TemplateData/UnityProgress.js"></script>
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/FinalBuild.json", {onProgress: UnityProgress});
+    </script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <a href="./index.html"> To Do List </a>
+          </li>
+          <li>
+            <a href="./about.html"> About </a>
+          </li>
+          <li>
+            <a href="./members.html"> The Members </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="webgl-content">
+      <div style="padding-top: 50px"><div id="unityContainer" style="width: 1440px; height: 800px"></div></div>
+      <div class="footer">
+        <div class="webgl-logo"></div>
+        <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+        <div class="title">ToDo Cal Hacks 8.0</div>
+      </div>
+    </div>
+  </body>
+</html>
